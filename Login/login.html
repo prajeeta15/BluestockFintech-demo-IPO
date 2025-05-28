@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="company-logo.png" alt="Company Logo" class="company-logo">
+        <br>
+
+        
+
+        </br>
+        <form action="dashboard.html" method="post">
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password" required>
+
+            <div class="remember-forgot">
+                <input type="checkbox"> Keep me signed in
+                <a href="forgot-password.html">Forgot Password?</a>
+            </div>
+
+            <div class="captcha-container">
+                <img src="recaptcha-image.png" alt="Captcha">
+                <span>I am not a robot</span>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p>or sign in with</p>
+
+        <a href="https://accounts.google.com/signin/oauth" class="google-btn">
+            <img src="google-logo.png" alt="Google Logo">
+            Continue with Google
+        </a>
+
+        <p>Don't have an account? <a href="signup.html">Create an account</a></p>
+    </div>
+</body>
+</html>
+
