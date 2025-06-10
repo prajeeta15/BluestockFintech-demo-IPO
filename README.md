@@ -1,6 +1,29 @@
-# BluestockFintech-demo-IPO
-a demo look for Bluestock fintech's IPO web application
-![Screenshot 2025-05-27 185957](https://github.com/user-attachments/assets/388bb3a6-9ee0-4072-9dcd-35be234b1513)
-![Screenshot 2025-05-28 105758](https://github.com/user-attachments/assets/ffbe3318-ca8e-43ce-b206-6d0ecf4d53bd)
-![Screenshot 2025-05-28 112520](https://github.com/user-attachments/assets/a582d792-d229-4c16-b139-959b2ee1e33a)
-![Screenshot 2025-05-28 112539](https://github.com/user-attachments/assets/a867d72d-8858-4050-92fd-0e0f93bd9000)
+As a part of major project for uni, read about this project :
+[major project report prajeeta.docx](https://github.com/user-attachments/files/20670972/major.project.report.prajeeta.docx)
+
+
+![Screenshot 2025-06-10 130622](https://github.com/user-attachments/assets/81d86b63-0e22-4ce6-a210-7bb7c957c6ea)!
+![Screenshot 2025-06-10 121714](https://github.com/user-attachments/assets/f7003eae-a3c3-4bec-94bc-4d34ad689ec8)
+![Screenshot 2025-06-04 092553](https://github.com/user-attachments/assets/708f33a6-2c8f-4d15-9d3b-88136afda941)
+![Screenshot 2025-06-04 092538](https://github.com/user-attachments/assets/5527a7fb-7894-4ef0-a76a-4bd4d4aea6ca)
+![Screenshot 2025-06-10 120356](https://github.com/user-attachments/assets/2a70af90-9b12-4339-8dd6-29c5fe580083)
+![Screenshot 2025-06-04 092459](https://github.com/user-attachments/assets/0de9ab0c-b571-434e-b93f-960b544897f8)
+![Screenshot 2025-06-10 111853](https://github.com/user-attachments/assets/3919bcba-eafc-47ee-b3b8-6511e08dc4e4)
+![Screenshot 2025-06-04 092333](https://github.com/user-attachments/assets/aef75e75-e963-473b-b742-2316c50f1a23)
+![Screenshot 2025-06-10 111821](https://github.com/user-attachments/assets/9a7420e0-a2fc-47c4-b727-71ee8b09b60e)
+![Screenshot 2025-06-10 111723](https://github.com/user-attachments/assets/5f43c71e-e735-45a6-b775-4111d8ebb296)
+![Screenshot 2025-06-04 094144](https://github.com/user-attachments/assets/d1f85ccf-7edc-4fba-b9a1-1ef12b7542ab)
+![Screenshot 2025-06-04 094133](https://github.com/user-attachments/assets/774a27aa-f717-42ce-9635-6f4d7b184dc0)
+![Screenshot 2025-06-10 155257](https://github.com/user-attachments/assets/bfdcfc64-72d6-4e40-830e-bd872714a766)
+![Screenshot 2025-06-10 154913](https://github.com/user-attachments/assets/fa5d095f-ea1e-468e-bac2-bfd84ec1426c)
+![Screenshot 2025-06-10 150854](https://github.com/user-attachments/assets/c05d01a7-7e5c-4a83-97a1-84bfd360141c)
+![Screenshot 2025-06-10 150836](https://github.com/user-attachments/assets/02df3a55-e1b2-459b-ae98-585e9a60cc7c)
+![Screenshot 2025-06-10 142811](https://github.com/user-attachments/assets/75c47587-61e1-4fc4-8300-ea826191174d)
+![Screenshot 2025-06-10 135417](https://github.com/user-attachments/assets/a67e1b5e-ccd3-4796-ae0c-e50e4bad2f9c)
+![Screenshot 2025-06-10 134912](https://github.com/user-attachments/assets/2981844e-b285-41d0-8ec0-e5e2bdbb67c4)
+![Screenshot 2025-06-10 130858](https://github.com/user-attachments/assets/4d612fee-f6ec-4c96-996f-07b7e4f7450a)
+![Screenshot 2025-06-10 130814](https://github.com/user-attachments/assets/24537a61-84ee-45dc-bbf2-04293ee0511a)
+[Uploading Screenshot 2025-06-10 130622.png…]()
+![Screenshot 2025-06-10 125206](https://github.com/user-attachments/assets/d94ce851-42db-440e-b46b-08a72344e907)
+![Screenshot 2025-06-10 124235](https://github.com/user-attachments/assets/e55e0f08-55b0-4536-a51b-4b661b9cfa4e)
+![Screenshot 2025-06-10 123013](https://github.com/user-attachments/assets/8f219d72-e1ce-45e2-a189-54ac9b62b015)
