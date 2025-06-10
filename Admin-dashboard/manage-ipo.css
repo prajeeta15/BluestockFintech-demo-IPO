@@ -1,0 +1,243 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: start; 
+}
+
+.sidebar-logo {
+    width: 40px; 
+    height: 40px;
+    object-fit: contain;
+}
+
+.sidebar a {
+    color: rgb(130, 128, 128);  
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 15px;
+    font-weight: 500;
+}
+.sidebar h5{
+    color: rgb(144, 135, 135);
+    font-size: 14px;
+    font-weight: bold;
+}
+.sidebar a:hover {
+    background-color: #dfe7fd;  
+    color: #4758a7; 
+}
+
+.sidebar a.active {
+    background-color: #dfe7fd; 
+    color: #4758a7;
+}
+
+.notification-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.user-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.company-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Navbar */
+.topbar {
+    background-color: #ffffff;
+    box-shadow: 0px 3px 10px rgba(137, 135, 135, 0.93);
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 15px 25px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+/* Main content area */
+ main {
+    margin-left: 220px;
+    padding: 20px 30px 50px 30px; 
+    min-height: 100vh;
+    background-color: #f5f6fa;
+}
+h2{
+    font-size: 25px;
+    font-weight: bold;
+}
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    background-color: #eef3fb;
+    cursor: pointer;
+}
+
+/* Status labels */
+.status {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85em;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.Ongoing {
+  background-color: #e0f7e9;
+  color: #1a7f37;
+}
+
+.Upcoming {
+  background-color: #fff8e1;
+  color: #ff9800;
+}
+
+.Closed {
+  background-color: #fce4ec;
+  color: #d81b60;
+}
+
+.NewlyListed {
+  background-color: #e0e0e0;
+  color: #606060;
+}
+
+
+/* Buttons */
+.btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-update {
+    background-color: #5b67f2;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.input-group .form-control {
+    border: 1px solid #ccc;
+    border-right: none;
+}
+
+.input-group .input-group-text {
+    background-color: #f8f9fa;
+    border-left: none;
+}
+
+
+.btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn.register {
+    background-color: #5b67f2;
+    color: white;
+}
+ 
+/* Dark Mode*/
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Topbar */
+.dark-mode .topbar {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+/* Sidebar */
+.dark-mode .sidebar {
+  background-color: #1a1a1a;
+}
+
+.dark-mode .sidebar a {
+  color: #ccc;
+}
+
+.dark-mode .sidebar a:hover,
+.dark-mode .sidebar a.active {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+/* Card/Table/Form Backgrounds */
+.dark-mode .main,
+.dark-mode table,
+.dark-mode .form-control,
+.dark-mode .form-select {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border-color: #333;
+}
+
+/* Table headers */
+.dark-mode th {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+/* Input group */
+.dark-mode .input-group-text {
+  background-color: #2b2b2b;
+  color: #e0e0e0;
+}
+
+/* Register button */
+.dark-mode .btn.register {
+  background-color: #5b67f2;
+  color: white;
+}
+
+/* Action buttons (optional) */
+.dark-mode .btn-update {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.dark-mode .btn-delete {
+  background-color: #e74c3c;
+  color: white;
+}
