@@ -1,0 +1,267 @@
+/* Base font */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #f5f6fa;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border-right: 1px solid #e0e0e0;
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 1rem 1.2rem;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.sidebar-logo {
+  width: 30px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.company-name {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+.sidebar h5 {
+  color: rgb(144, 135, 135);
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  list-style: none;
+}
+
+.sidebar a {
+  color: rgb(130, 128, 128);
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.sidebar a:hover {
+  background-color: #dfe7fd;
+  color: #4758a7;
+}
+
+.sidebar a.active {
+  background-color: #dfe7fd;
+  color: #4758a7;
+}
+
+.sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Topbar */
+.topbar {
+  background-color: #ffffff;
+  box-shadow: 0px 3px 10px rgba(137, 135, 135, 0.15);
+  padding: 15px 25px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Search input group */
+.input-group .form-control {
+  border: 1px solid #ccc;
+  border-right: none;
+}
+
+.input-group .input-group-text {
+  background-color: #f8f9fa;
+  border-left: none;
+}
+
+/* Notifications and user */
+.notification-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.user-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info span {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Main content */
+main {
+  margin-left: 240px;
+  padding: 20px 30px 50px 30px;
+  min-height: 100vh;
+  background-color: #f5f6fa;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+th {
+  background-color: #eef3fb;
+  font-weight: 500;
+}
+
+/* Status labels */
+.status {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85em;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.Ongoing {
+  background-color: #e0f7e9;
+  color: #1a7f37;
+}
+
+.Upcoming {
+  background-color: #fff8e1;
+  color: #ff9800;
+}
+
+.Closed {
+  background-color: #fce4ec;
+  color: #d81b60;
+}
+
+.NewlyListed {
+  background-color: #e0e0e0;
+  color: #606060;
+}
+
+/* Buttons */
+.btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Dark Mode*/
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Topbar */
+.dark-mode .topbar {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+/* Sidebar */
+.dark-mode .sidebar {
+  background-color: #1a1a1a;
+}
+
+.dark-mode .sidebar a {
+  color: #ccc;
+}
+
+.dark-mode .sidebar a:hover,
+.dark-mode .sidebar a.active {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+/* Card/Table/Form Backgrounds */
+.dark-mode .main,
+.dark-mode table,
+.dark-mode .form-control,
+.dark-mode .form-select {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border-color: #333;
+}
+
+/* Table headers */
+.dark-mode th {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+/* Input group */
+.dark-mode .input-group-text {
+  background-color: #2b2b2b;
+  color: #e0e0e0;
+}
+
+/* Register button */
+.dark-mode .btn.register {
+  background-color: #5b67f2;
+  color: white;
+}
+
+/* Action buttons (optional) */
+.dark-mode .btn-update {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.dark-mode .btn-delete {
+  background-color: #e74c3c;
+  color: white;
+}
