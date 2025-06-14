@@ -67,68 +67,70 @@
             <h2>Register IPO Details</h2>
             <div>
               <a href="manage-ipo.html" class="btn cancel">Cancel</a>
-              <button class="btn register">Register</button>
+              <button type="submit" class="btn register">Register</button>
             </div>
           </div>
+          <form id="ipoForm" class="form-section">
+  <h3>IPO Information</h3>
+  <div class="form-grid">
+    <div class="logo-upload">
+      <img src="nse-logo.jpg" id="companyLogo" alt="Company Logo" />
+      <input type="file" id="logoInput" accept="image/*" hidden />
+      <button type="button" onclick="document.getElementById('logoInput').click()">Upload Logo</button>
+      <button type="button" class="delete">Delete</button>
+    </div>
 
-          <div class="form-section">
-            <h3>IPO Information</h3>
-            <div class="form-grid">
-              <div class="logo-upload">
-                <img src="nse-logo.jpg" id="companyLogo" alt="Company Logo" />
-                <input type="file" id="logoInput" accept="image/*" hidden />
-                <button onclick="document.getElementById('logoInput').click()">Upload Logo</button>
-                <button class="delete">Delete</button>
-              </div>
+    <div class="form-row">
+      <input name="company" placeholder="Company Name" required />
+      <input name="priceBand" placeholder="Price Band" required />
+    </div>
 
-              <div class="form-row">
-                <input placeholder="Company Name" />
-                <input placeholder="Price Band" />
-              </div>
-              <div class="form-row">
-                <input placeholder="Open" />
-                <input placeholder="Close" />
-              </div>
-              <div class="form-row">
-                <input placeholder="Issue Size" />
-                <select>
-                  <option>Issue Type</option>
-                  <option>Book Built</option>
-                  <option>Fixed Price</option>
-                </select>
-              </div>
-              <div class="form-row">
-                <input placeholder="Listing Date" />
-                <select>
-                  <option>Status</option>
-                  <option>Ongoing</option>
-                  <option>Upcoming</option>
-                  <option>Closed</option>
-                  <option>Newly Listed</option>
-                </select>
-              </div>
-            </div>
+    <div class="form-row">
+      <input name="open" type="date" placeholder="Open" required />
+      <input name="close" type="date" placeholder="Close" required />
+    </div>
 
-            <h4></h4>
-            <div class="form-grid">
-              <div class="form-row">
-                <input placeholder="IPO Price" />
-                <input placeholder="Listing Price" />
-              </div>
-              <div class="form-row">
-                <input placeholder="Listing Gain" />
-                <input placeholder="Listing Date" />
-              </div>
-              <div class="form-row">
-                <input placeholder="CMP" />
-                <input placeholder="Current Return" />
-              </div>
-              <div class="form-row">
-                <input placeholder="Enter RHP PDF Link" />
-                <input placeholder="Enter DRHP PDF Link" />
-              </div>
-            </div>
-          </div>
+    <div class="form-row">
+      <input name="issueSize" placeholder="Issue Size" required />
+      <select name="issueType" required>
+        <option disabled selected>Issue Type</option>
+        <option>Book Built</option>
+        <option>Fixed Price</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <input name="listingDate" type="date" placeholder="Listing Date" required />
+      <select name="status" required>
+        <option disabled selected>Status</option>
+        <option>Ongoing</option>
+        <option>Upcoming</option>
+        <option>Closed</option>
+        <option>Newly Listed</option>
+      </select>
+    </div>
+  </div>
+
+  <h4>Additional Info</h4>
+  <div class="form-grid">
+    <div class="form-row">
+      <input name="ipoPrice" placeholder="IPO Price" />
+      <input name="listingPrice" placeholder="Listing Price" />
+    </div>
+    <div class="form-row">
+      <input name="listingGain" placeholder="Listing Gain (%)" />
+      <input name="listingDateRepeat" type="date" placeholder="Listing Date" />
+    </div>
+    <div class="form-row">
+      <input name="cmp" placeholder="CMP (Current Market Price)" />
+      <input name="currentReturn" placeholder="Current Return (%)" />
+    </div>
+    <div class="form-row">
+      <input name="rhpLink" placeholder="Enter RHP PDF Link" />
+      <input name="drhpLink" placeholder="Enter DRHP PDF Link" />
+    </div>
+  </div>
+</form>
         </section>
       </main>
     </div>
