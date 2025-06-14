@@ -154,48 +154,48 @@
   </div>
 
   <script>
-    const params = new URLSearchParams(window.location.search);
-    const ipoId = params.get("id");
+   document.addEventListener("DOMContentLoaded", async () => {
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get("id");
 
-    fetch("ipo-data.json")
-      .then(res => res.json())
-      .then(data => {
-        const ipo = data.find(item =>
-          item.company.toLowerCase().replace(/\s+/g, '-') === ipoId
-        );
+  if (!slug) return;
 
-        if (!ipo) {
-          document.querySelector("form").innerHTML = "<h4 class='text-danger'>IPO Not Found</h4>";
-          return;
-        }
+  try {
+    const res = await fetch(`/ipos/company/${slug}`);
+    if (!res.ok) throw new Error("IPO not found");
+    const ipo = await res.json();
 
-        // Basic info
-        document.getElementById("companyName").textContent = ipo.company;
-        document.getElementById("priceBand").value = ipo.priceBand;
-        document.getElementById("open").value = ipo.open;
-        document.getElementById("close").value = ipo.close;
-        document.getElementById("issueSize").value = ipo.issueSize;
-        document.getElementById("issueType").value = ipo.issueType;
-        document.getElementById("listingDate").value = ipo.listingDate;
-        document.getElementById("status").value = ipo.status;
+    // Basic IPO details
+    document.getElementById("companyName").innerText = ipo.company;
+    document.getElementById("priceBand").innerText = ipo.priceBand;
+    document.getElementById("open").innerText = ipo.open;
+    document.getElementById("close").innerText = ipo.close;
+    document.getElementById("issueSize").innerText = ipo.issueSize;
+    document.getElementById("issueType").innerText = ipo.issueType;
+    document.getElementById("listingDate").innerText = ipo.listingDate;
+    document.getElementById("status").innerText = ipo.status;
 
-        // Extended listing info (optional)
-        document.getElementById("ipoPrice").value = ipo.ipoPrice || "-";
-        document.getElementById("listingPrice").value = ipo.listingPrice || "-";
-        document.getElementById("listingGain").value = ipo.listingGain || "-";
-        document.getElementById("cmp").value = ipo.cmp || "-";
-        document.getElementById("currentReturn").value = ipo.currentReturn || "-";
-        document.getElementById("rhp").value = ipo.rhp || "-";
-        document.getElementById("drhp").value = ipo.drhp || "-";
+    // Extended listing info
+    document.getElementById("ipoPrice").innerText = ipo.ipoPrice || "-";
+    document.getElementById("listingPrice").innerText = ipo.listingPrice || "-";
+    document.getElementById("listingGain").innerText = ipo.listingGain || "-";
+    document.getElementById("cmp").innerText = ipo.cmp || "-";
+    document.getElementById("currentReturn").innerText = ipo.currentReturn || "-";
+    document.getElementById("rhp").innerText = ipo.rhp || "-";
+    document.getElementById("drhp").innerText = ipo.drhp || "-";
 
-        // Logo 
-        if (ipo.logo) {
-          document.getElementById("companyLogo").src = ipo.logo;
-        }
-      })
-      .catch(() => {
-        document.querySelector("form").innerHTML = "<h4 class='text-danger'>Error loading IPO data</h4>";
-      });
+    // Company Logo
+    if (ipo.logo) {
+      document.getElementById("companyLogo").src = ipo.logo;
+    }
+
+  } catch (error) {
+    console.error("Error loading IPO data:", error);
+    document.querySelector("form")?.replaceWith(
+      document.createElement("h4")
+    ).innerText = "Error loading IPO data";
+  }
+});
   </script>
 </body>
 </html>
