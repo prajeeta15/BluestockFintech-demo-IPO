@@ -1,6 +1,6 @@
 
 function fetchIPOs()
-{fetch('ipo-data.json')
+{fetch('/ipos')
   .then(response => response.json())
   .then(data => {
     const tableBody = document.getElementById("ipoTableBody");
