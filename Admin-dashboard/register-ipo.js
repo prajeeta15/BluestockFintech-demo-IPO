@@ -9,7 +9,7 @@ document.getElementById("logoInput").addEventListener("change", function (event)
 function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
 
-    // Toggle icon color (optional)
+    // Toggle icon color
     const btn = document.getElementById("darkToggle");
     if (document.body.classList.contains("dark-mode")) {
       btn.classList.remove("btn-outline-secondary");
@@ -30,4 +30,22 @@ function toggleDarkMode() {
       document.getElementById("darkToggle").classList.replace("btn-outline-secondary", "btn-light");
     }
   };
+
+  document.getElementById("ipoForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+  const data = Object.fromEntries(formData.entries());
+
+  const res = await fetch("/ipos", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  });
+
+  const result = await res.json();
+  alert("IPO Registered: " + result.company);
+});
 
