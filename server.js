@@ -4,35 +4,15 @@ const cors = require("cors");
 const path = require("path");
 
 const app = express();
-const PORT = 3000;
-
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "public"))); // Serve static files
+app.use(express.static("public")); 
+mongoose.connect("mongodb://127.0.0.1:27017/IPO_DATA");
 
-mongoose.connect("mongodb://127.0.0.1:27017/IPO_DATA", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
-const ipoSchema = new mongoose.Schema({
-  company: String,
-  priceBand: String,
-  open: String,
-  close: String,
-  issueSize: String,
-  issueType: String,
-  listingDate: String,
-  status: String,
-});
-
+const ipoSchema = new mongoose.Schema({ /* ... */ });
 const IPO = mongoose.model("IPO", ipoSchema);
 
-app.get("/ipos", async (req, res) => {
-  const ipos = await IPO.find();
-  res.json(ipos);
-});
+app.get("/ipos", async (req, res) => res.json(await IPO.find()));
+app.post("/ipos", async (req, res) => res.json(await new IPO(req.body).save()));
 
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
-});
+app.listen(3000, () => console.log("Server running on http://localhost:3000"));
