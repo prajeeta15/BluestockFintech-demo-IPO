@@ -16,9 +16,6 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '20'
-
-    - name: Install dependencies
-      run: npm install
       
     - name: Ensure package.json exists
       run: |
@@ -26,6 +23,9 @@ jobs:
           echo "❌ package.json not found"
           exit 1
         fi
+        
+    - name: Install dependencies
+      run: npm install
         
     - name: Zip files for upload
       run: |
