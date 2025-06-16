@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IPO Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="visual-dashboard.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav class="col-md-2 d-md-block sidebar position-fixed">
+        <div class="sidebar-header p-3 d-flex align-items-center">
+          <img src="Bluestock Fintech Logo.png" alt="Bluestock Fintech Logo" class="sidebar-logo" />
+          <h3 class="ms-2 mb-0 company-name">Bluestock Fintech</h3>
+        </div>
+
+        <div class="p-3">
+          <h5 class="text-uppercase">Menu</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="visual-dashboard.html">
+                <i class="bi bi-speedometer2"></i> Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="manage-ipo.html">
+                <i class="bi bi-bar-chart"></i> Manage IPO
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="bi bi-calendar-check"></i> IPO Subscription</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="bi bi-cash-coin"></i> IPO Allotment</a>
+            </li>
+          </ul>
+
+          <hr class="bg-light" />
+
+          <h5 class="text-uppercase">Others</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-gear"></i> Settings</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-code-slash"></i> API Manager</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-person"></i> Accounts</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-question-circle"></i> Help</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="col-md-10 offset-md-2 ms-sm-auto px-md-4 py-4">
+        <!-- Topbar -->
+        <div class="topbar d-flex justify-content-between align-items-center mb-4">
+          <div class="input-group w-25">
+            <input type="text" class="form-control" placeholder="Search IPOs..." />
+            <span class="input-group-text"><i class="bi bi-search"></i></span>
+          </div>
+          <div class="d-flex align-items-center">
+            <img src="notif-icon.jpg" alt="Notifications" class="notification-icon" />
+            <div class="user-info d-flex align-items-center">
+              <span class="me-2">Hi, Vishal</span>
+              <img src="user-icon.png" alt="User" class="user-img" />
+            </div>
+            <button class="btn btn-sm btn-outline-secondary ms-3" onclick="toggleDarkMode()" id="darkToggle">
+  <img src="moon.png" alt="Dark Mode" width="20" height="20" />
+</button>
+          </div>
+        </div>
+
+        <!-- Dashboard Cards -->
+        <div class="row g-4">
+          <!-- IPO Stats -->
+          <div class="col-md-4">
+            <div class="card p-4 shadow">
+              <h4 class="mb-4">IPO Dashboard India</h4>
+              <div class="circle-container d-flex justify-content-around text-center">
+                <div class="circle total">
+                  <span class="number fs-4 fw-bold">30</span>
+                  <div class="label">Total IPO</div>
+                </div>
+                <div class="circle gain">
+                  <span class="number fs-4 fw-bold">20</span>
+                  <div class="label">IPO in Gain</div>
+                </div>
+                <div class="circle loss">
+                  <span class="number fs-4 fw-bold">9</span>
+                  <div class="label">IPO in Loss</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-md-4">
+            <div class="card p-4 shadow">
+              <h4 class="mb-3">Quick Links</h4>
+              <ul class="list-unstyled quick-links">
+                <li class="d-flex align-items-center justify-content-between mb-3">
+                  <div class="d-flex align-items-center">
+                    <img src="nse-logo.jpg" alt="NSE" class="quick-link-img me-2" />
+                    <span>NSE India</span>
+                  </div>
+                  <a href="https://www.nseindia.com/market-data/live-equity-market?symbol=NIFTY%2050" class="visit-now">Visit</a>
+                </li>
+                <li class="d-flex align-items-center justify-content-between mb-3">
+                  <div class="d-flex align-items-center">
+                    <img src="bse-logo.png" alt="BSE" class="quick-link-img me-2" />
+                    <span>BSE India</span>
+                  </div>
+                  <a href="https://www.bseindia.com/" class="visit-now">Visit</a>
+                </li>
+                <li class="d-flex align-items-center justify-content-between mb-3">
+                  <div class="d-flex align-items-center">
+                    <img src="sebi-logo.png" alt="SEBI" class="quick-link-img me-2" />
+                    <span>SEBI</span>
+                  </div>
+                  <a href="https://www.sebi.gov.in/" class="visit-now">Visit</a>
+                </li>
+                <li class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <img src="money-control.png" alt="MoneyControl" class="quick-link-img me-2" />
+                    <span>MoneyControl</span>
+                  </div>
+                  <a href="https://www.moneycontrol.com/" class="visit-now">Visit</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Chart -->
+          <div class="col-md-4">
+            <div class="card p-4 shadow">
+              <h4 class="mb-3">Main Board IPO</h4>
+              <canvas id="ipoChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('ipoChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Upcoming', 'New Listed', 'Ongoing'],
+        datasets: [{
+          data: [15, 25, 2],
+          backgroundColor: ['#6c63ff', '#ff8c00', '#4bc0c0']
+        }]
+      }
+    });
+    function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+
+    // Toggle icon color 
+    const btn = document.getElementById("darkToggle");
+    if (document.body.classList.contains("dark-mode")) {
+      btn.classList.remove("btn-outline-secondary");
+      btn.classList.add("btn-light");
+    } else {
+      btn.classList.add("btn-outline-secondary");
+      btn.classList.remove("btn-light");
+    }
+
+    // Persist preference
+    localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+  }
+
+  // Load theme on page load
+  window.onload = () => {
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+      document.getElementById("darkToggle").classList.replace("btn-outline-secondary", "btn-light");
+    }
+  };
+  </script>
+</body>
+</html>
