@@ -1,52 +1,37 @@
-name: Bluestock Node.js CI/CD
+name: Bluestock Node.js CI
 
 on:
   push:
-    branches: [main]  # Trigger on push to main branch
+    branches: [main]  # Trigger CI on pushes to main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-      
-    - name: Ensure package.json exists
-      run: |
-        if [ ! -f package.json ]; then
-          echo "❌ package.json not found"
-          exit 1
-        fi
-        
-    - name: Install dependencies
-      run: npm install
-        
-    - name: Zip files for upload
-      run: |
-        zip -r project-files.zip . -x "node_modules/*"
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-    - name: Upload zipped project
-      uses: actions/upload-artifact@v4
-      with:
-        name: project-files
-        path: project-files.zip
+      - name: Install dependencies
+        run: npm install
 
-    - name: Upload build artifacts (optional frontend dist)
-      if: success()
-      uses: actions/upload-artifact@v4
-      with:
-        name: project-files
-        path: |
-          .
-          !node_modules/
+      - name: Run test script
+        run: npm test
 
-    - name: Debug PWD and LS
-      run: |
-        pwd
-        ls -la
+      - name: Display project structure (debug)
+        run: |
+          echo "✅ Directory structure:"
+          ls -la
+
+      - name: Upload app files (artifact for preview or deployment)
+        uses: actions/upload-artifact@v4
+        with:
+          name: bluestock-ipo-app
+          path: |
+            ./
+            !node_modules/
