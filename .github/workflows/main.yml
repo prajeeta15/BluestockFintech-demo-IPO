@@ -1,18 +1,21 @@
-name: Bluestock Node.js CI
+name: Build and Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]  # Trigger CI on pushes to main
+    branches: [main]  # deploy only on push to main
+
+permissions:
+  contents: write  # needed to push to gh-pages
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -20,18 +23,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run test script
-        run: npm test
+      - name: Build the app
+        run: npm run build
 
-      - name: Display project structure (debug)
-        run: |
-          echo "✅ Directory structure:"
-          ls -la
-
-      - name: Upload app files (artifact for preview or deployment)
-        uses: actions/upload-artifact@v4
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          name: bluestock-ipo-app
-          path: |
-            ./
-            !node_modules/
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build  # or ./dist depending on your framework
