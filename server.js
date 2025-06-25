@@ -14,7 +14,6 @@ const IPO = mongoose.model("IPO", ipoSchema);
 
 app.get("/ipos", async (req, res) => res.json(await IPO.find()));
 app.post("/ipos", async (req, res) => res.json(await new IPO(req.body).save()));
-app.use(express.static(path.join(__dirname, "public")));
 app.use("/ipos", require("./routes/ipoRoutes"));
-
+app.use(express.static(path.join(__dirname, "public")));
 app.listen(3000, () => console.log("Server running on http://localhost:3000"));
