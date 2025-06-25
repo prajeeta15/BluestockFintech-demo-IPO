@@ -2,14 +2,6 @@ As a part of major project for uni, read about this project :
 
 ## Node.js, MongoDB, Express
 
-## Chapter 1: 
-# Introduction
-
-1.2 Problem Definition
-India's IPO ecosystem has undergone significant transformation over the last decade, driven by rising retail investor interest, economic liberalization, and the emergence of technology-driven financial markets. However, the process of IPO participation remains largely dependent on traditional brokers, inconsistent mobile platforms, and opaque bidding mechanisms that limit access for common investors, particularly those unfamiliar with market jargon or without access to third-party trading accounts.
-One of the primary challenges is the lack of a centralized, transparent, and user-friendly platform for public IPO participation. Existing systems are often segmented requiring users to juggle between banking apps for ASBA verification, broker platforms for bidding, and stock exchange portals for status tracking. For small and first-time investors, this fragmentation creates confusion, reduces confidence, and leads to missed opportunities. Moreover, SEBI-mandated digital compliance like UPI mandates, PAN verification, and demat linking are either poorly integrated or not automated in most systems.
-This fragmentation signals a clear gap for digital transformation, a unified IPO platform that automates regulatory workflows, simplifies bid participation, and educates users with real-time tools and guidance. The IPO Web Application addresses this challenge by offering an integrated, accessible solution built with modern web technologies, secure protocols, and SEBI-compliant architecture to streamline end-to-end IPO engagement.
-
 1.3 Objectives of the Project
 The goal of this project is to develop a modern, scalable, and secure IPO Web Application that serves both administrative and retail investor needs. The specific objectives include:
 •	To build a secure and modular web platform that allows users to browse upcoming IPOs, apply bids, and track their allotments seamlessly from one interface.
@@ -72,26 +64,7 @@ While not direct users, regulators influence the platform’s workflows. The app
 •	Provide secure audit trails
 •	Support data exports in structured formats for scrutiny
 
-2. Workflow description
-The application will support an end-to-end IPO lifecycle built for a 4-month academic + mentoring timeline, enabling not only functional delivery but also the training of junior developers under real-world scenarios.
-Month 1 – Core MVP Buildout
-•	User Authentication: Secure registration/login for investors and admins.
-•	IPO Listings Module: Admin can create IPOs with metadata like name, date, sector, price range.
-•	Role-Based Access: Investor and admin separation using JWT tokens.
-•	Responsive Frontend: Built using React.js with TailwindCSS for mobile/web compatibility.
-•	CI Pipeline: GitHub repository with ESLint/Prettier checks for consistent formatting.
-Month 2 – Investor Experience + Analytics
-•	Search & Filters: IPOs filterable by industry, risk profile, or status (live/closed).
-•	Charts & Dashboards: Live graphs for IPO subscription data, bidding patterns.
-•	Lazy Loading & Pagination: Improve performance for large IPO databases.
-•	File Uploads: Admins can upload IPO prospectus (PDFs) and company images.
-•	Mentorship Focus: Juniors learn API consumption, state management, PR creation.
-Month 3 – Security, Testing, Scalability
-•	Caching Layer: Redis or in-memory caching to boost IPO retrieval speeds.
-•	Notifications: Toast alerts + optional email reminders for bid deadlines.
-•	Audit Logs: Every admin action (edit IPO, delete user) logged with timestamp/IP.
-•	Testing: Unit tests for components, integration tests for key flows, E2E via Cypress.
-•	Mentorship Focus: Secure coding practices, input sanitization, rate-limiting.
+
 Month 4 – Deployment, Monitoring & Final Polish
 •	CI/CD Pipelines: GitHub Actions for frontend/backend auto-deploy.
 •	Monitoring Tools: Sentry for error tracking, Grafana for performance metrics.
